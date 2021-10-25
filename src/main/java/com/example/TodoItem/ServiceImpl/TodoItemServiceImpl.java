@@ -40,4 +40,9 @@ public class TodoItemServiceImpl implements TodoItemService{
 		return todoItemDao.getListById(id);
 	}
 
+	@Override
+	public void deleteById(Long id) {
+		todoItemDao.deleteById(id);
+	}
+
 }

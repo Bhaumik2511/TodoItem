@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,8 +32,8 @@ public class TodoItemController {
 		
 	}
 	
-	@PutMapping("/update-todoItem/{id}")
-	public ResponseEntity<TodoItem> updateTodoGroup(@PathVariable("id") Long id,@RequestBody TodoItem todoGroup) {
+	@PutMapping("/update-todoItem/{itemId}")
+	public ResponseEntity<TodoItem> updateTodoGroup(@PathVariable("itemId") Long id,@RequestBody TodoItem todoGroup) {
 	
 		return new ResponseEntity<>(service.updateTodoItem(id,todoGroup),HttpStatus.ACCEPTED);
 		
@@ -44,10 +45,15 @@ public class TodoItemController {
 		
 	}
 	
-	@GetMapping("/todoItems/{id}")
-	public ResponseEntity<List<TodoItem>> getTodoItemsById(@PathVariable("id") Long id) {
+	@GetMapping("/todoItems/{groupId}")
+	public ResponseEntity<List<TodoItem>> getTodoItemsById(@PathVariable("groupId") Long id) {
 		return new ResponseEntity<>(service.getTodoItemByList(id),HttpStatus.OK);
 		
+	}
+	
+	@DeleteMapping("/delete-group/{itemId}")
+	public void deleteTodoItem(@PathVariable("itemId") Long itemId) {
+		service.deleteById(itemId);
 	}
 	
 	

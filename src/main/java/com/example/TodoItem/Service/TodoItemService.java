@@ -13,4 +13,6 @@ public interface TodoItemService {
 	public TodoItem updateTodoItem(Long id,TodoItem todoGroup);
 	
 	public List<TodoItem> getTodoItemByList(Long id);
+	
+	public void deleteById(Long id);
 }
