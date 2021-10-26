@@ -1,6 +1,6 @@
 # TodoItem
 
-# Open Api UI URL
+# Swagger-UI  URL
 http://localhost:8082/swagger-ui/index.html 
 
 #Create Todo Item endpoint
@@ -23,4 +23,6 @@ http://localhost:8082/swagger-ui/index.html
 	-Delete record by itemId
 
 
+#H2 Database url
+http://localhost:8082/h2-console
 	
