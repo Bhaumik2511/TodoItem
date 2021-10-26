@@ -15,22 +15,23 @@ public class TodoItem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long itemId;
-	private String desciption;
+	private String description;
 	private Long  	group_id;
 	private LocalDateTime createdDateTime = LocalDateTime.now();
 	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public Long getItemId() {
 		return itemId;
 	}
 	public void setItemId(Long itemId) {
 		this.itemId = itemId;
 	}
-	public String getDesciption() {
-		return desciption;
-	}
-	public void setDesciption(String desciption) {
-		this.desciption = desciption;
-	}
+	
 	public LocalDateTime getCreatedDateTime() {
 		return createdDateTime;
 	}

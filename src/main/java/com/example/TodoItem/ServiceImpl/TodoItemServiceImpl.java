@@ -27,7 +27,7 @@ public class TodoItemServiceImpl implements TodoItemService{
 	@Override
 	public TodoItem updateTodoItem(Long id, TodoItem newtodoItem) {
 		return todoItemDao.findById(id).map(item -> {
-			item.setDesciption(newtodoItem.getDesciption());
+			item.setDescription(newtodoItem.getDescription());
 			return todoItemDao.save(item);
 		}).orElseGet(() -> {
 			newtodoItem.setItemId(id);
