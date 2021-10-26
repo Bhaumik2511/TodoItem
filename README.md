@@ -3,13 +3,13 @@
 # Swagger-UI  URL
 http://localhost:8082/swagger-ui/index.html 
 
-#H2 Database url
- URL 	  :http://localhost:8082/h2-console
- Username : Bhaumik23
- Password :pass123	
+# H2 Database url
+ 	-URL 	  :http://localhost:8082/h2-console
+ 	-Username : Bhaumik23
+ 	-Password :pass123	
  
  
-#Create Todo Item endpoint
+# Create Todo Item endpoint
 	- http://localhost:8082/create-todoItem
 	- Accept groupId as Request header and Request Body as For example ( {"description":"Chocolate item"})
 	-groupId as request header in order to map and  create Todo Item
@@ -19,13 +19,12 @@ http://localhost:8082/swagger-ui/index.html
 	-For Example :http://localhost:8082/update-todoItem/1
 	-Accept Request Body as ( {"description":"Chocolate item"}). Accept only one property to be modified.
 	
-#Get Todo Item endpoint
+# Get Todo Item endpoint
 	-http://localhost:8082/todoItems
 	-Fetch all the todoItems list
 
-#Delete Todo Item endpoint
+# Delete Todo Item endpoint
 	-http://localhost:8082/delete-group/{itemID}
 	-For example :http://localhost:8082/delete-group/2
 	-Delete record by itemId
-
 
